@@ -1,0 +1,31 @@
+﻿@model Part2_AutoComplete.Web.Models.Manufacturer
+@{
+    ViewBag.Title = "Getting Started With KendoUI - Part 2: Auto Complete";
+}
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#Name").kendoAutoComplete({
+            minLength: 1,
+            dataTextField: "Name",
+            dataValueField: "Id",
+            suggest: true,
+            dataSource: { serverFiltering: true,  transport: {read: {url: "/Home/GetManufacturers/",dataType: "json", type: "POST"}}}
+        });
+    });
+</script>
+
+<h2>@ViewBag.Title</h2>
+
+@using(Html.BeginForm()) {
+    <div id="root">
+        <div id="manufacturers">
+            @Html.HiddenFor(x => x.Id)
+            <label for="input" class="info">Choose a car manufacturer:</label>
+            @Html.TextBoxFor(m => m.Name)
+            <div class="hint">Start typing the name of a car manufacturer <br/>(Aston Martin, Bugatti, Ferrari, Lamborghini, Porsche) </div>
+        </div>
+    </div>
+    <input type="submit" value="Send Back To Server"/>
+    <h3>@ViewBag.Message</h3>
+}

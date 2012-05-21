@@ -1,0 +1,90 @@
+body {
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+
+.info {
+    display: block;
+    line-height: 22px;
+    padding: 0 5px 5px 0;
+	color: #36558e;
+}
+				
+#manufacturers {
+	width: 482px;
+	height: 152px;
+	padding: 10px 0 0 30px;
+	margin: 30px auto;
+}
+
+#root
+{
+    width: 250px;
+	vertical-align: middle;
+}
+
+.hint {
+    line-height: 22px;
+    color: #aaa;
+    font-style: italic;
+	font-size: .9em;
+	color: #7496d4;
+}
