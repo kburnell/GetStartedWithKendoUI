@@ -8,8 +8,8 @@
         $("#Name").kendoAutoComplete({
             minLength: 1,
             dataTextField: "Name",
-            dataValueField: "Id",
             suggest: true,
+            filter: "startswith",
             dataSource: { serverFiltering: true,  transport: {read: {url: "/Home/GetManufacturers/",dataType: "json", type: "POST"}}}
         });
     });
