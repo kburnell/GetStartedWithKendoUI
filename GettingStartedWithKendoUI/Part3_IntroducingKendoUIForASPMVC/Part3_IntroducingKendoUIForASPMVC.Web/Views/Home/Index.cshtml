@@ -1,0 +1,10 @@
+﻿@using Kendo.Mvc.UI
+@model Part3_IntroducingKendoUIForASPMVC.Web.Models.MyModel
+
+@{
+    ViewBag.Title = "Introducing Kendo UI for ASP.NET MVC";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@(Html.Kendo().DatePicker().Name("Birthday"))
