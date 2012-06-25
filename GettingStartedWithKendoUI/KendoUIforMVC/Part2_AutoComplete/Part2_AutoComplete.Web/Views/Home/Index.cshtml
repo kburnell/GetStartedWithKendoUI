@@ -1,0 +1,22 @@
+﻿@using Kendo.Mvc.UI
+@model IEnumerable<Part2_AutoComplete.Web.Models.Manufacturer>
+@{
+    ViewBag.Title = "Kendo UI for ASP.NET MVC: Part 2 - AutoComplete";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@(Html.Kendo().AutoComplete()
+    .Name("manufacturerAutoComplete")
+    .DataTextField("Name")
+    .BindTo(Model)
+    .Suggest(true)
+    .Filter(FilterType.StartsWith)
+    .Placeholder("Manufacturer...")
+    .DataSource(source => {
+            source.Read(read =>
+               {
+                        read.Action("GetManufacturers", "Home");
+               }).ServerFiltering(true);
+    })
+)
